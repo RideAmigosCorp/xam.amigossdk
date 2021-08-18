@@ -1,0 +1,15 @@
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\bin\Debug\netstandard2.0\ExampleApp.Droid.deps.json
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\bin\Debug\netstandard2.0\ExampleApp.Droid.dll
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\bin\Debug\netstandard2.0\ref\ExampleApp.Droid.dll
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\bin\Debug\netstandard2.0\ExampleApp.Droid.pdb
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.csproj.AssemblyReference.cache
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.AssemblyInfoInputs.cache
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.AssemblyInfo.cs
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.csproj.CoreCompileInputs.cache
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.dll
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ref\ExampleApp.Droid.dll
+C:\Users\benda\source\repos\AmigosSDK\ExampleApp.Droid\ExampleApp.Droid\obj\Debug\netstandard2.0\ExampleApp.Droid.pdb

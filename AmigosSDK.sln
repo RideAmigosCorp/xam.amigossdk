@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigosSDK.Droid", "AmigosSDK.Droid\AmigosSDK.Droid.csproj", "{455ED123-D58F-4579-8854-63D9F50B7ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigosSDK.iOS", "AmigosSDK.iOS\AmigosSDK.iOS.csproj", "{4C417B42-2B3E-4767-A410-22FC487639C8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AmigosSDK.Shared", "AmigosSDK.Shared\AmigosSDK.Shared.shproj", "{DCA46F9D-88C1-4A8F-AB14-E18C370320A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp.Droid.Android", "ExampleApp.Droid\ExampleApp.Droid.Android\ExampleApp.Droid.Android.csproj", "{4C5E0B43-6004-4893-A676-50D58366AE58}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AmigosSDK.Shared\AmigosSDK.Shared.projitems*{455ed123-d58f-4579-8854-63d9f50b7add}*SharedItemsImports = 4
+		AmigosSDK.Shared\AmigosSDK.Shared.projitems*{dca46f9d-88c1-4a8f-ab14-e18c370320a3}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455ED123-D58F-4579-8854-63D9F50B7ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455ED123-D58F-4579-8854-63D9F50B7ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455ED123-D58F-4579-8854-63D9F50B7ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455ED123-D58F-4579-8854-63D9F50B7ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C417B42-2B3E-4767-A410-22FC487639C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C417B42-2B3E-4767-A410-22FC487639C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C417B42-2B3E-4767-A410-22FC487639C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C417B42-2B3E-4767-A410-22FC487639C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5E0B43-6004-4893-A676-50D58366AE58}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C87091F-125F-4816-B9D2-7583D05EACE1}
+	EndGlobalSection
+EndGlobal

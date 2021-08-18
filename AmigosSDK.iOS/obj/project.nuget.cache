@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "V5QQWtCZsFBFTonXGV8tVCjjxHMYQpsj24NRfrKcz9e/SK25J31HGykxDt64FVRBxkz8i/mOa6HrnCYjjNk95g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\benda\\source\\repos\\AmigosSDK\\AmigosSDK.iOS\\AmigosSDK.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\benda\\.nuget\\packages\\nuget.build.tasks.pack\\5.2.0\\nuget.build.tasks.pack.5.2.0.nupkg.sha512",
+    "C:\\Users\\benda\\.nuget\\packages\\xamarin.forms\\4.5.0.530\\xamarin.forms.4.5.0.530.nupkg.sha512"
+  ],
+  "logs": []
+}

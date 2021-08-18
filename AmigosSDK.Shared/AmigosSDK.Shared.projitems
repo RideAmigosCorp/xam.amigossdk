@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dca46f9d-88c1-4a8f-ab14-e18c370320a3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AmigosSDK.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ActionEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DecisionHandlerDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FormsWebView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FormsWebView.Static.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFormsWebView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WebViewContentType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)AmigosSDK.nuspec" />
+  </ItemGroup>
+</Project>

@@ -41,3 +41,6 @@ C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Debug\110\lp\69\jl\fil
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Debug\110\lp\71\jl\files.cache
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Debug\110\lp\74\jl\files.cache
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Debug\110\lp\75\jl\files.cache
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\bin\Debug\AmigosSDK.Abstractions.dll
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\bin\Debug\AmigosSDK.Abstractions.pdb
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Debug\110\AmigosSDK.Droid.csproj.CopyComplete

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wpa81+wp8</PackageTargetFallback>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Messaging\**" />
+		<EmbeddedResource Remove="Messaging\**" />
+		<None Remove="Messaging\**" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
+  </ItemGroup>
+
+</Project>

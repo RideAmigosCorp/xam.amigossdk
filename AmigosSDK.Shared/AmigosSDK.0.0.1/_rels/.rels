@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Type="http://schemas.microsoft.com/packaging/2010/07/manifest" Target="/AmigosSDK.nuspec" Id="RE43EAD7DCAE9A274" />
-  <Relationship Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="/package/services/metadata/core-properties/8b8297b3661a41978a0de6413d7df7a0.psmdcp" Id="R612C3D1B16BD49E7" />
-</Relationships>

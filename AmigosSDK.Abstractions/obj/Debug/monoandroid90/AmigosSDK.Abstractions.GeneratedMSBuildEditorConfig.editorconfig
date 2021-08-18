@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Plugin.AmigosSDK.Abstractions
+build_property.ProjectDir = C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\

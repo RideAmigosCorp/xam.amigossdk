@@ -3,7 +3,7 @@
 using Android.Webkit;
 using Android.Net.Http;
 using Android.Graphics;
-using AmigosSDK.Shared;
+using AmigosSDK.Abstractions;
 using Android.Runtime;
 using Android.Content;
 using Xamarin.Forms;

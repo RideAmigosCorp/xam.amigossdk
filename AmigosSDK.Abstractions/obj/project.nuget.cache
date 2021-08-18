@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "0Pa2/Msg7bB1Kt41khCWRH7wPosvdaOXJnWkTzbanXhzm9EThe2puCkZcY1hzbjByp+X3mODRKiDI9Ui9lxjXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\benda\\source\\repos\\AmigosSDK\\AmigosSDK.Abstractions\\AmigosSDK.Abstractions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\benda\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\benda\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\benda\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\benda\\.nuget\\packages\\xamarin.forms\\4.5.0.530\\xamarin.forms.4.5.0.530.nupkg.sha512"
+  ],
+  "logs": []
+}

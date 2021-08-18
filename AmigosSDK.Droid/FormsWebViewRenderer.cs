@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using AmigosSDK.Shared;
+using AmigosSDK.Abstractions;
 using AmigosSDK.Droid;
 using Android.Webkit;
 using Xamarin.Forms;

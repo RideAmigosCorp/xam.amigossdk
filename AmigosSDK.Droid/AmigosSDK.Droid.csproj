@@ -38,7 +38,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-	<PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.1.1"/>
+    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.1.1" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -74,7 +74,12 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
-  <Import Project="..\AmigosSDK.Shared\AmigosSDK.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\AmigosSDK.Abstractions\AmigosSDK.Abstractions.csproj">
+      <Project>{dd2ca26e-6018-449e-b2bf-d4016e0a083f}</Project>
+      <Name>AmigosSDK.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

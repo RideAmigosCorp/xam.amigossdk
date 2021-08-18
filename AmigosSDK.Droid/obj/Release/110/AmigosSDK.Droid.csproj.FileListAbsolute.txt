@@ -41,3 +41,6 @@ C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Release\110\uploadflag
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Release\110\stamp\_CleanIntermediateIfNeeded.stamp
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Release\110\stamp\_ConvertResourcesCases.stamp
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Release\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\bin\Release\AmigosSDK.Abstractions.dll
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\bin\Release\AmigosSDK.Abstractions.pdb
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Droid\obj\Release\110\AmigosSDK.Droid.csproj.CopyComplete

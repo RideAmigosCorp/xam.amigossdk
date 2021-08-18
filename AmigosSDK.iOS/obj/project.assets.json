@@ -498,7 +498,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\benda\\source\\repos\\AmigosSDK\\Build": {},
+        "C:\\Users\\benda\\source\\repos\\AmigosSDK\\AmigosSDK.Shared": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://ci.appveyor.com/nuget/nugetizer3000": {}
       },

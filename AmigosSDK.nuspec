@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AmigosSDK</id>
-    <version>0.0.4</version>
+    <version>0.0.10</version>
     <authors>RideAmigos</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>

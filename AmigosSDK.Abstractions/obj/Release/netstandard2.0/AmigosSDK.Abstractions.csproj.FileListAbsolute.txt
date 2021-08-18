@@ -8,3 +8,4 @@ C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\obj\Release\netstan
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\obj\Release\netstandard2.0\XamlC.stamp
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\obj\Release\netstandard2.0\AmigosSDK.Abstractions.dll
 C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\obj\Release\netstandard2.0\AmigosSDK.Abstractions.pdb
+C:\Users\benda\source\repos\AmigosSDK\AmigosSDK.Abstractions\obj\Release\netstandard2.0\AmigosSDK.Abstractions.csproj.AssemblyReference.cache

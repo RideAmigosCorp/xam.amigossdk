@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AmigosSDK</id>
-    <version>0.0.10</version>
+    <version>0.0.11</version>
     <authors>RideAmigos</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
@@ -27,13 +27,12 @@
   </metadata>
   <files>
 	<!-- netstandard2.0 -->
-	<file src="AmigosSDK.Abstractions\bin\Release\netstandard2.0\AmigosSDK.Abstractions.*" target="lib\netstandard2.0" />
+	<file src="AmigosSDK.Abstractions\bin\Release\netstandard2.0\*" target="lib\netstandard2.0" />
 
 	  <!-- Android -->
-	<file src="AmigosSDK.Droid\bin\Release\AmigosSDK.Droid.*" target="lib\MonoAndroid10" />
-	  <file src="AmigosSDK.Abstractions\bin\Release\netstandard2.0\AmigosSDK.Abstractions.*" target="lib\MonoAndroid10" />
-	<!-- iOS 
-		<file src="AmigoSDK.iOS\bin\Release\AmigoSDK.iOS.*" target="lib\Xamarin.iOS10" />
-	-->
+	<file src="AmigosSDK.Droid\bin\Release\*" target="lib\MonoAndroid10" />
+	
+	<!-- iOS -->
+	<file src="AmigosSDK.iOS\bin\Release\Amigos*" target="lib\Xamarin.iOS10" />
   </files>
 </package>

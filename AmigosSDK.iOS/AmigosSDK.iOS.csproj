@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-	 <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.2.0"/>
+	 <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.2.0" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -42,11 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormsWebViewRenderer.cs" />
+    <Compile Include="FormsNavigationDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
       <Version>4.5.0.530</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AmigosSDK.Abstractions\AmigosSDK.Abstractions.csproj">
+      <Project>{DD2CA26E-6018-449E-B2BF-D4016E0A083F}</Project>
+      <Name>AmigosSDK.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

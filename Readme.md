@@ -20,7 +20,7 @@ RAWebView WebView = new RAWebView() {
 ```
 // Initialize the Webview with the JWT
     <amigos:RAWebView 
-      BindingContext="{x:Reference pageContext}"
+      BindingContext="{x:Reference pageModel}"
       x:Name="RideAmigosContent" 
       JWTString="{Binding Path=commuterJWTSTring}" 
       />

@@ -27,6 +27,35 @@ RAWebView WebView = new RAWebView() {
 ```
 
 
+## Optional `PageContext`
+
+Initializing the view with a specific context will be supported. This will include:
+  - `action` - a string targeting a specific section of the Commute experience to load for the user (the possible values will be defined as we proceed with development)
+  - `metadata` - an anonymous object (at least temporarily) that will include any relevant details which could be used during the course of the user's interactions with the commute content. One suggested element would be an OriginalPageName which could be used to return the user to the appropriate place in the Workplace App after a successful interaction / workflow completion
+
+### Example
+
+```
+String commuterJWTString = "JWT String";
+
+dynamic metadata = new ExpandoObject();
+metadata.OriginalPageName = "home";
+
+pageContext = new RAWebViewContext
+{
+    action = "Main Menu",
+    metadata = metadata
+};
+
+// Initialize the Webview with the JWT
+RAWebView WebView = new RAWebView() {
+    JWTString = commuterJWTString,
+    // optional page context
+    PageContext = pageContext
+}
+```
+
+
 # Planned API Additions
 
 ## Status, Exception, and Navigation Callbacks
@@ -53,25 +82,4 @@ private void OnCommuteUserStatusChange(UserStatusChangeDelegate eventObj)
 {}
 private void OnException(RAWebViewExceptionDelegate eventObj){}
 private void OnNavigationRequest(RAWebViewNavigationDelegate eventObj){ }
-```
-
-## Optional `PageContext`
-
-Initializing the view with a specific context will be supported. This will include:
-  - `action` - a string targeting a specific section of the Commute experience to load for the user (the possible values will be defined as we proceed with development)
-  - `metadata` - an anonymous object (at least temporarily) that will include any relevant details which could be used during the course of the user's interactions with the commute content. One suggested element would be an OriginalPageName which could be used to return the user to the appropriate place in the Workplace App after a successful interaction / workflow completion
-
-### Example
-
-```
-RAWebViewContext pageContext = new RAWebViewContext();
-pageContext.action = "home"; 
-pageContext.metadata = new { OriginalPageName = "HomeScreen" };
-
-// Initialize the Webview with the JWT
-RAWebView WebView = new RAWebView() {
-    JWTString = commuterJWTString,
-    // optional page context
-    PageContext = pageContext
-}
 ```

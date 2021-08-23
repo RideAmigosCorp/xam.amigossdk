@@ -12,7 +12,7 @@ namespace AmigosSDK.Abstractions
         /// <summary>
         /// A bindable property for the JWTString property.
         /// </summary>
-        public static readonly BindableProperty JWTStringProperty = BindableProperty.Create(nameof(JWTString), typeof(String), typeof(FormsWebView), null, propertyChanged: OnJWTSTringPropertyChanged);
+        public static readonly BindableProperty JWTStringProperty = BindableProperty.Create(nameof(JWTString), typeof(String), typeof(RAWebView), null, propertyChanged: OnJWTSTringPropertyChanged);
 
         static void OnJWTSTringPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -28,9 +28,34 @@ namespace AmigosSDK.Abstractions
             set => SetValue(JWTStringProperty, value);
         }
 
+        /// <summary>
+        /// A bindable property for the PageContext property.
+        /// </summary>
+        public static readonly BindableProperty PageContextProperty = BindableProperty.Create(nameof(PageContext), typeof(RAWebViewContext), typeof(RAWebView), null, propertyChanged: OnPageViewContextPropertyChanged);
+
+        static void OnPageViewContextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            if (newValue is null)
+            {
+                return;
+            }
+            else
+            {
+                RAWebView.GlobalRegisteredHeaders.Add("Webview-Context", (newValue as RAWebViewContext).getEncodedValue());
+            }
+        }
+
+        /// <summary>
+        /// The context associed with the current page load request
+        /// </summary>
+        public RAWebViewContext PageContext
+        {
+            get => (RAWebViewContext)GetValue(PageContextProperty);
+            set => SetValue(PageContextProperty, value);
+        }
+
         public RAWebView() {
             this.Source = "https://linkedin.rideamigos.com/workplace-app-preview";
-            //this.Source = "https://httpbin.org/anything";
         }
 
     }

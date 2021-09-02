@@ -81,6 +81,8 @@ namespace AmigosSDK.Droid
 
         void SetupControl()
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebView :: SetupControl:Start");
+
             var webView = new Android.Webkit.WebView(Forms.Context);
             _callback = new JavascriptValueCallback(this);
 
@@ -99,6 +101,7 @@ namespace AmigosSDK.Droid
 
             SetNativeControl(webView);
             OnControlChanged?.Invoke(this, webView);
+            Console.WriteLine("AmigosSDK :: Android :: WebView :: SetupControl:Complete");
         }
 
         async void OnCallbackAdded(object sender, string e)
@@ -134,6 +137,7 @@ namespace AmigosSDK.Droid
 
         void OnPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
+            Console.WriteLine("AmigosSDK :: Android :: OnPropertyChanged "+e.PropertyName);
             switch (e.PropertyName)
             {
                 case "Source":
@@ -228,8 +232,10 @@ namespace AmigosSDK.Droid
         void LoadFromInternet()
         {
             if (Element == null || Control == null || Element.Source == null) return;
+            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet");
 
             var headers = new Dictionary<string, string>();
+
 
             // Add Local Headers
             foreach (var header in Element.LocalRegisteredHeaders)
@@ -248,7 +254,12 @@ namespace AmigosSDK.Droid
                 }
             }
 
+            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet :: Headers Added");
+
             Control.LoadUrl(Element.Source, headers);
+
+            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet :: LoadUrl");
+
         }
     }
 #pragma warning restore CS0618 // Type or member is obsolete

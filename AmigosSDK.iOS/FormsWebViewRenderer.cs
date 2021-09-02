@@ -70,6 +70,7 @@ namespace AmigosSDK.iOS
 
         void SetupControl()
         {
+            Console.WriteLine("AmigosSDK :: iOS :: WebView :: SetupControl:Start");
             _navigationDelegate = new FormsNavigationDelegate(this);
             _contentController = new WKUserContentController();
             _contentController.AddScriptMessageHandler(this, "invokeAction");
@@ -89,6 +90,8 @@ namespace AmigosSDK.iOS
 
             SetNativeControl(wkWebView);
             OnControlChanged?.Invoke(this, wkWebView);
+
+            Console.WriteLine("AmigosSDK :: iOS :: WebView :: SetupControl:Complete");
         }
 
         async void OnCallbackAdded(object sender, string e)
@@ -101,6 +104,7 @@ namespace AmigosSDK.iOS
 
         void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            Console.WriteLine("AmigosSDK :: iOS :: OnPropertyChanged " + e.PropertyName);
             switch (e.PropertyName)
             {
                 case "Source":
@@ -181,6 +185,7 @@ namespace AmigosSDK.iOS
 
         void LoadInternetContent()
         {
+            Console.WriteLine("AmigosSDK :: iOS :: LoadInternetContent");
             if (Control == null || Element == null) return;
 
             var headers = new NSMutableDictionary();
@@ -201,7 +206,7 @@ namespace AmigosSDK.iOS
                         headers.Add(key, new NSString(header.Value));
                 }
             }
-
+            Console.WriteLine("AmigosSDK :: iOS :: LoadInternetContent :: Headers Added");
             var url = new NSUrl(Element.Source);
             var request = new NSMutableUrlRequest(url)
             {
@@ -209,6 +214,7 @@ namespace AmigosSDK.iOS
             };
 
             Control.LoadRequest(request);
+            Console.WriteLine("AmigosSDK :: iOS :: LoadInternetContent :: LoadRequest");
         }
 
         public void DidReceiveScriptMessage(WKUserContentController userContentController, WKScriptMessage message)

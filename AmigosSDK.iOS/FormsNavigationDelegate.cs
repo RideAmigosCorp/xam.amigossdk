@@ -57,6 +57,8 @@ namespace AmigosSDK.iOS
             if (navigationResponse.Response is NSHttpUrlResponse)
             {
                 var code = ((NSHttpUrlResponse)navigationResponse.Response).StatusCode;
+                Console.WriteLine("AmigosSDK :: iOS :: NavigationDelegate :: DecidePolicy2 :: StatusCode = "+code);
+
                 if (code >= 400)
                 {
                     renderer.Element.Navigating = false;
@@ -72,6 +74,8 @@ namespace AmigosSDK.iOS
         [Export("webView:didFinishNavigation:")]
         public async override void DidFinishNavigation(WKWebView webView, WKNavigation navigation)
         {
+            Console.WriteLine("AmigosSDK :: iOS :: NavigationDelegate :: DidFinishNavigation");
+
             if (Reference == null || !Reference.TryGetTarget(out FormsWebViewRenderer renderer)) return;
             if (renderer.Element == null) return;
 

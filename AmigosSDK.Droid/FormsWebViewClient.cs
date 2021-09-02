@@ -33,6 +33,7 @@ namespace AmigosSDK.Droid
 
         public override void OnReceivedError(Android.Webkit.WebView view, IWebResourceRequest request, WebResourceError error)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewClient :: OnReceivedError :: " + error.ErrorCode);
             if (Reference == null || !Reference.TryGetTarget(out FormsWebViewRenderer renderer)) return;
             if (renderer.Element == null) return;
 
@@ -125,6 +126,8 @@ namespace AmigosSDK.Droid
 
         public override void OnPageStarted(Android.Webkit.WebView view, string url, Bitmap favicon)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewClient :: OnPageStarted :: "+url);
+
             if (Reference == null || !Reference.TryGetTarget(out FormsWebViewRenderer renderer)) return;
             if (renderer.Element == null) return;
 
@@ -182,6 +185,8 @@ namespace AmigosSDK.Droid
 
         public async override void OnPageFinished(Android.Webkit.WebView view, string url)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewClient :: OnPageFinished :: " + url);
+
             if (Reference == null || !Reference.TryGetTarget(out FormsWebViewRenderer renderer)) return;
             if (renderer.Element == null) return;
 

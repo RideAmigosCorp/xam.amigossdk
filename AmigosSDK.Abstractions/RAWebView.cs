@@ -25,7 +25,12 @@ namespace AmigosSDK.Abstractions
         public String JWTString
         {
             get => (String)GetValue(JWTStringProperty);
-            set => SetValue(JWTStringProperty, value);
+            set
+            {
+                SetValue(JWTStringProperty, value);
+                Console.WriteLine("AmigosSDK :: Set JWTString");
+
+            }
         }
 
         /// <summary>
@@ -51,11 +56,16 @@ namespace AmigosSDK.Abstractions
         public RAWebViewContext PageContext
         {
             get => (RAWebViewContext)GetValue(PageContextProperty);
-            set => SetValue(PageContextProperty, value);
+            set
+            {
+                SetValue(PageContextProperty, value);
+                Console.WriteLine("AmigosSDK :: Set PageContext");
+            }
         }
 
         public RAWebView() {
             this.Source = "https://linkedin.rideamigos.com/workplace-app-preview";
+            Console.WriteLine("AmigosSDK :: RAWebView Instantiated");
         }
 
     }

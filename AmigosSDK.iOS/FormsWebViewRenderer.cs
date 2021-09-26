@@ -27,6 +27,7 @@ namespace AmigosSDK.iOS
 
         public static void Initialize()
         {
+            Console.WriteLine("AmigosSDK :: iOS :: FormsWebViewRenderer :: Initialize");
             var dt = DateTime.Now;
         }
 
@@ -70,7 +71,7 @@ namespace AmigosSDK.iOS
 
         void SetupControl()
         {
-            Console.WriteLine("AmigosSDK :: iOS :: WebView :: SetupControl:Start");
+            Console.WriteLine("AmigosSDK :: iOS :: FormsWebViewRenderer :: SetupControl:Start");
             _navigationDelegate = new FormsNavigationDelegate(this);
             _contentController = new WKUserContentController();
             _contentController.AddScriptMessageHandler(this, "invokeAction");
@@ -91,7 +92,7 @@ namespace AmigosSDK.iOS
             SetNativeControl(wkWebView);
             OnControlChanged?.Invoke(this, wkWebView);
 
-            Console.WriteLine("AmigosSDK :: iOS :: WebView :: SetupControl:Complete");
+            Console.WriteLine("AmigosSDK :: iOS :: FormsWebViewRenderer :: SetupControl:Complete");
         }
 
         async void OnCallbackAdded(object sender, string e)
@@ -104,7 +105,7 @@ namespace AmigosSDK.iOS
 
         void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            Console.WriteLine("AmigosSDK :: iOS :: OnPropertyChanged " + e.PropertyName);
+            Console.WriteLine("AmigosSDK :: iOS :: FormsWebViewRenderer :: OnPropertyChanged " + e.PropertyName);
             switch (e.PropertyName)
             {
                 case "Source":

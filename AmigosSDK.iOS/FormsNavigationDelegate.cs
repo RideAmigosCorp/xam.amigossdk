@@ -13,6 +13,7 @@ namespace AmigosSDK.iOS
 
         public FormsNavigationDelegate(FormsWebViewRenderer renderer)
         {
+            Console.WriteLine("AmigosSDK :: iOS :: NavigationDelegate :: Set FormsNavigationDelegate");
             Reference = new WeakReference<FormsWebViewRenderer>(renderer);
         }
 

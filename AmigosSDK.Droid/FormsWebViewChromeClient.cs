@@ -19,6 +19,7 @@ namespace AmigosSDK.Droid
 
         public FormsWebViewChromeClient(FormsWebViewRenderer renderer)
         {
+            Console.WriteLine("AmigosSDK :: Android :: FormsWebViewChromeClient :: Set Renderer");
             Reference = new WeakReference<FormsWebViewRenderer>(renderer);
         }
 

@@ -33,6 +33,7 @@ namespace AmigosSDK.Droid
 
         public static void Initialize()
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: Initialize");
             var dt = DateTime.Now;
         }
 
@@ -81,7 +82,7 @@ namespace AmigosSDK.Droid
 
         void SetupControl()
         {
-            Console.WriteLine("AmigosSDK :: Android :: WebView :: SetupControl:Start");
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: SetupControl:Start");
 
             var webView = new Android.Webkit.WebView(Forms.Context);
             _callback = new JavascriptValueCallback(this);
@@ -101,11 +102,12 @@ namespace AmigosSDK.Droid
 
             SetNativeControl(webView);
             OnControlChanged?.Invoke(this, webView);
-            Console.WriteLine("AmigosSDK :: Android :: WebView :: SetupControl:Complete");
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: SetupControl:Complete");
         }
 
         async void OnCallbackAdded(object sender, string e)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: OnCallbackAdded");
             if (Element == null || string.IsNullOrWhiteSpace(e)) return;
 
             if ((sender == null && Element.EnableGlobalCallbacks) || sender != null)
@@ -122,6 +124,7 @@ namespace AmigosSDK.Droid
 
         void OnBackRequested(object sender, EventArgs e)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: OnBackRequested");
             if (Control == null) return;
 
             if (Control.CanGoBack())
@@ -232,7 +235,7 @@ namespace AmigosSDK.Droid
         void LoadFromInternet()
         {
             if (Element == null || Control == null || Element.Source == null) return;
-            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet");
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: LoadFromInternet");
 
             var headers = new Dictionary<string, string>();
 
@@ -254,11 +257,11 @@ namespace AmigosSDK.Droid
                 }
             }
 
-            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet :: Headers Added");
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: LoadFromInternet :: Headers Added");
 
             Control.LoadUrl(Element.Source, headers);
 
-            Console.WriteLine("AmigosSDK :: Android :: LoadFromInternet :: LoadUrl");
+            Console.WriteLine("AmigosSDK :: Android :: WebViewRenderer :: LoadFromInternet :: LoadUrl");
 
         }
     }

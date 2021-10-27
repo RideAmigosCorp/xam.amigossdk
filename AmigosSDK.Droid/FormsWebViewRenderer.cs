@@ -93,7 +93,7 @@ namespace AmigosSDK.Droid
             // Defaults
             webView.Settings.JavaScriptEnabled = true;
             webView.Settings.DomStorageEnabled = true;
-            webView.AddJavascriptInterface(new FormsWebViewBridge(this), "bridge");
+            webView.AddJavascriptInterface(new FormsWebViewBridge(this), "Android");
             webView.SetWebViewClient(new FormsWebViewClient(this));
             webView.SetWebChromeClient(new FormsWebViewChromeClient(this));
             webView.SetBackgroundColor(Android.Graphics.Color.Transparent);

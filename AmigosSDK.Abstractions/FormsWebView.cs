@@ -294,6 +294,7 @@ namespace AmigosSDK.Abstractions
 
         internal void HandleScriptReceived(string data)
         {
+            Console.WriteLine("AmigosSDK :: HandleScriptReceived :: "+data);
             if (string.IsNullOrWhiteSpace(data))
             {
                 return;

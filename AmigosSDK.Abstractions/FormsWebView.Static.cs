@@ -104,24 +104,38 @@ namespace AmigosSDK.Abstractions
         {
             get
             {
+                var fnScript = "";
                 switch (Device.RuntimePlatform)
                 {
                     case Device.Android:
-                        return "function csharp(data){bridge.invokeAction(data);}";
-
+                        fnScript = "function amigosdk(data){window.Android.invokeAction(data);}";
+                        break;
                     case Device.iOS:
                     case "macOS":
-                        return "function csharp(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
-
-                    default:
-                        return "function csharp(data){window.external.notify(data);}";
+                        fnScript = "function amigosdk(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
+                        break;
                 }
+                Console.WriteLine("AmigosSDK :: FormsWebView.Static :: InjectedFunction :: "+fnScript);
+                return fnScript;
             }
         }
 
         internal static string GenerateFunctionScript(string name)
         {
-            return $"function {name}(str){{csharp(\"{{'action':'{name}','data':'\"+window.btoa(str)+\"'}}\");}}";
+            var deviceBridgePath = "";
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    deviceBridgePath = "window.Android";
+                    break;
+                case Device.iOS:
+                case "macOS":
+                    deviceBridgePath = "window..webkit.messageHandlers";
+                    break;
+            }
+            var fnScript = $"{deviceBridgePath}.{name} = function(str){{amigosdk(\"{{'action':'{name}','data':'\"+window.btoa(str)+\"'}}\");}}";
+            Console.WriteLine("AmigosSDK :: FormsWebView.Static :: GenerateFunctionScript :: " + fnScript);
+            return fnScript;
         }
     }
 }

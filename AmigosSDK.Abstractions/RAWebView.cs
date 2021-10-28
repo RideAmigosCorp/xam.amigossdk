@@ -66,7 +66,40 @@ namespace AmigosSDK.Abstractions
         public RAWebView() {
             this.Source = "https://linkedin.rideamigos.com/workplace-app-preview";
             Console.WriteLine("AmigosSDK :: RAWebView Instantiated");
+            this.AddLocalCallback("closeApp", CloseSDK);
+            this.AddLocalCallback("openExternalUrl", HandleExternalURL);
         }
+
+        /// <summary>
+        /// Tell the RideAmigos app to "go back". This may triger "OnCloseRequested" if the app is on the dashboard screen.
+        /// </summary>
+        async public void BackPressed() {
+            await this.InjectJavascriptAsync("window.onBackPressed()");
+        }
+
+        /// <summary>
+        /// If supplied, the OnCloseRequested event handler will be called whenever the web-content requests "closeApp"
+        /// </summary>
+        /// <param name="obj"></param>
+        private void CloseSDK(string obj)
+        {
+            OnCloseRequested?.Invoke(null, new EventArgs());
+        }
+
+        /// <summary>
+        /// Handle "openExternalUrl" request form the web-content
+        /// </summary>
+        /// <param name="uri"></param>
+        private void HandleExternalURL(string uri)
+        {
+            this.HandleNavigationStartRequest(uri);
+        }
+
+        /// <summary>
+        /// If supplied, the OnCloseRequested event handler will be called whenever the web-content requests "closeApp"
+        /// </summary>
+        /// <param name="obj"></param>
+        public event EventHandler OnCloseRequested;
 
     }
 }

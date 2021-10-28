@@ -136,6 +136,7 @@ namespace AmigosSDK.Droid
 
         bool AttemptToHandleCustomUrlScheme(Android.Webkit.WebView view, string url)
         {
+            Console.WriteLine("AmigosSDK :: Android :: WebViewClient :: AttemptToHandleCustomUrlScheme :: " + url);
             if (url.StartsWith("mailto"))
             {
                 Android.Net.MailTo emailData = Android.Net.MailTo.Parse(url);
@@ -157,10 +158,17 @@ namespace AmigosSDK.Droid
             if (url.StartsWith("http"))
             {
                 Intent webPage = new Intent(Intent.ActionView, Android.Net.Uri.Parse(url));
-                if (webPage.ResolveActivity(Android.App.Application.Context.PackageManager) != null)
+                webPage.SetFlags(ActivityFlags.NewTask);
+                try
+                {
                     Android.App.Application.Context.StartActivity(webPage);
-
-                return true;
+                    return true;
+                }
+                catch (ActivityNotFoundException e) {
+                    Console.WriteLine("AmigosSDK :: Android :: WebViewClient :: AttemptToHandleCustomUrlScheme :: ActivityNotFoundException");
+                    return false;
+                }
+               
             }
 
             return false;

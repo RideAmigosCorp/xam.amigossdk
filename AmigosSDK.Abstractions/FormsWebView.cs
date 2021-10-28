@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -66,6 +67,14 @@ namespace AmigosSDK.Abstractions
         /// </summary>
         public readonly Dictionary<string, string> LocalRegisteredHeaders = new Dictionary<string, string>();
 
+        /// <summary>
+        /// The combination of HandledAppUrlRegex and ExternalBrowserUrlRegex controls what content is rendered within the app webview.
+        /// By default, any url which does not match the HandledAppUrlRegex is routed to the system url handler.
+        /// However urls which match the ExternalBrowserUrlRegex are ALWAYS routed to the external system url handler.
+        /// </summary>
+        public Regex HandledAppUrlRegex = new Regex(@"^(.*)|(https://.*rideamigos\.com.*)|(http://10\.0\.2\.2:3000.*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        public Regex ExternalBrowserUrlRegex = new Regex(@".*external$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        
         /// <summary>
         /// The content type to attempt to load. By default this is Internet.
         /// </summary>
@@ -256,7 +265,7 @@ namespace AmigosSDK.Abstractions
         // All code which should be hidden from the end user goes here
         #region Internals
 
-        internal DecisionHandlerDelegate HandleNavigationStartRequest(string uri)
+        public DecisionHandlerDelegate HandleNavigationStartRequest(string uri)
         {
             // By default, we only attempt to offload valid Uris with none http/s schemes
             bool validUri = Uri.TryCreate(uri, UriKind.Absolute, out Uri uriResult);
@@ -264,7 +273,10 @@ namespace AmigosSDK.Abstractions
 
             if (validUri)
             {
-                validScheme = uriResult.Scheme.StartsWith("http") || uriResult.Scheme.StartsWith("file");
+                validScheme = uriResult.Scheme.StartsWith("http") || uriResult.Scheme.StartsWith("file") ;
+                validScheme = validScheme && HandledAppUrlRegex.IsMatch(uri) && !ExternalBrowserUrlRegex.IsMatch(uri);
+                Console.WriteLine("AmigosSDK :: HandleNavigationStartRequest :: HandledAppUrlRegex Match :: "+uri+" :: " + (HandledAppUrlRegex.IsMatch(uri)).ToString());
+                Console.WriteLine("AmigosSDK :: HandleNavigationStartRequest :: ExternalBrowserUrlRegex Match :: " + uri + " :: " + (ExternalBrowserUrlRegex.IsMatch(uri)).ToString());
             }
 
             var handler = new DecisionHandlerDelegate()

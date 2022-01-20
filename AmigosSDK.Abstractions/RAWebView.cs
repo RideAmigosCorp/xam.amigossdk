@@ -16,7 +16,7 @@ namespace AmigosSDK.Abstractions
 
         static void OnJWTSTringPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            RAWebView.GlobalRegisteredHeaders.Add("Authorization", "Bearer "+(newValue as String));
+            RAWebView.GlobalRegisteredHeaders["Authorization"] = "Bearer "+(newValue as String);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace AmigosSDK.Abstractions
             }
             else
             {
-                RAWebView.GlobalRegisteredHeaders.Add("Webview-Context", (newValue as RAWebViewContext).getEncodedValue());
+                RAWebView.GlobalRegisteredHeaders["Webview-Context"] = (newValue as RAWebViewContext).getEncodedValue();
             }
         }
 
